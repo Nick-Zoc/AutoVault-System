@@ -43,7 +43,7 @@ public class Login extends javax.swing.JFrame {
         registerHere = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("AutoVault\n");
+        setTitle("AutoVault | Login");
         setBackground(new java.awt.Color(31, 41, 55));
         setForeground(new java.awt.Color(31, 41, 55));
         setMaximumSize(new java.awt.Dimension(800, 600));
