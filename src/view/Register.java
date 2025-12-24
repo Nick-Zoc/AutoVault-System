@@ -106,6 +106,7 @@ public class Register extends javax.swing.JFrame {
         loginButton.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Sign In");
+        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         alreadyAccount.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         alreadyAccount.setForeground(new java.awt.Color(102, 102, 102));
