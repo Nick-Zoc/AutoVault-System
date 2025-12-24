@@ -86,6 +86,7 @@ public class InventoryPopup extends javax.swing.JDialog {
         jComboBox1.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Car", "Bike" }));
+        jComboBox1.setToolTipText("Select vehicle type");
 
         auto1.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
         auto1.setForeground(new java.awt.Color(0, 0, 0));
@@ -99,6 +100,7 @@ public class InventoryPopup extends javax.swing.JDialog {
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField1.setToolTipText("Enter selling price");
         jTextField1.setCaretColor(new java.awt.Color(0, 0, 0));
 
         username2.setBackground(new java.awt.Color(0, 0, 0));
@@ -114,11 +116,13 @@ public class InventoryPopup extends javax.swing.JDialog {
         jTextField4.setBackground(new java.awt.Color(255, 255, 255));
         jTextField4.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField4.setToolTipText("Enter vehicle model ");
         jTextField4.setCaretColor(new java.awt.Color(0, 0, 0));
 
         jTextField5.setBackground(new java.awt.Color(255, 255, 255));
         jTextField5.setFont(new java.awt.Font("Inter", 0, 13)); // NOI18N
         jTextField5.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField5.setToolTipText("Enter Stock amount");
         jTextField5.setCaretColor(new java.awt.Color(0, 0, 0));
 
         loginButton1.setBackground(new java.awt.Color(102, 102, 102));
