@@ -11,12 +11,12 @@ package model;
 public class Vehicle {
 
     // creating private variables to restrict access.
+    private String vehicleType; // e.g., "Car", "Bike" (Used to distinguish vehicle types)
     private String make;
     private String model;
     private int amount;
     private double price;
     private String status;      // e.g., "Available", "Sold"
-    private String vehicleType; // e.g., "Car", "Bike" (Used to distinguish vehicle types)
 
     // constructor to initialize the variables
     public Vehicle(String vehicleId, String make, String model, int amount, double price, String status, String vehicleType) {
@@ -32,6 +32,54 @@ public class Vehicle {
         }
         this.vehicleType = vehicleType;
     }
+
     // Getters and Setters for each attribute
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int year) {
+        this.amount = amount;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
 }
