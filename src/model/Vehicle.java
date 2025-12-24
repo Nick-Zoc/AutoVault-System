@@ -10,23 +10,28 @@ package model;
  */
 public class Vehicle {
 
-    // creating private variables for access restriction
-    private String carId;
+    // creating private variables to restrict access.
     private String make;
     private String model;
-    private int year;
+    private int amount;
     private double price;
     private String status;      // e.g., "Available", "Sold"
-    private String vehicleType; // e.g., "Car", "Bike" (Used to distinguish types)
+    private String vehicleType; // e.g., "Car", "Bike" (Used to distinguish vehicle types)
 
     // constructor to initialize the variables
-    public Vehicle(String carId, String make, String model, int year, double price, String status, String vehicleType) {
-        this.carId = carId;
+    public Vehicle(String vehicleId, String make, String model, int amount, double price, String status, String vehicleType) {
         this.make = make;
         this.model = model;
-        this.year = year;
+        this.amount = amount;
         this.price = price;
-        this.status = status;
+        // when amount of stock > 0 then vehicle is available.
+        if (amount > 0) {
+            this.status = "Available";
+        } else {
+            this.status = "Sold";
+        }
         this.vehicleType = vehicleType;
     }
+    // Getters and Setters for each attribute
+
 }
