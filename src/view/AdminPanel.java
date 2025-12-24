@@ -8,14 +8,14 @@ package view;
  *
  * @author nick
  */
-public class AdminHome extends javax.swing.JFrame {
+public class AdminPanel extends javax.swing.JFrame {
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AdminHome.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AdminPanel.class.getName());
 
     /**
      * Creates new form AdminHome
      */
-    public AdminHome() {
+    public AdminPanel() {
         initComponents();
     }
 
@@ -868,7 +868,7 @@ public class AdminHome extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new AdminHome().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new AdminPanel().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
