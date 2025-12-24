@@ -91,6 +91,8 @@ public class Register extends javax.swing.JFrame {
         username.setText("Email");
 
         usernameField.setBackground(new java.awt.Color(255, 255, 255));
+        usernameField.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+        usernameField.setForeground(new java.awt.Color(0, 0, 0));
         usernameField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
         usernameField.addActionListener(this::usernameFieldActionPerformed);
 
@@ -100,6 +102,8 @@ public class Register extends javax.swing.JFrame {
         password.setText("Password");
 
         passwordField.setBackground(new java.awt.Color(255, 255, 255));
+        passwordField.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+        passwordField.setForeground(new java.awt.Color(0, 0, 0));
         passwordField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
 
         loginButton.setBackground(new java.awt.Color(0, 127, 255));
@@ -118,6 +122,8 @@ public class Register extends javax.swing.JFrame {
         signIn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         confirmPasswordField.setBackground(new java.awt.Color(255, 255, 255));
+        confirmPasswordField.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+        confirmPasswordField.setForeground(new java.awt.Color(0, 0, 0));
         confirmPasswordField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
 
         confirmPassword.setBackground(new java.awt.Color(0, 0, 0));
