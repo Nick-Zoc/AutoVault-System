@@ -89,6 +89,7 @@ public class AdminPanel extends javax.swing.JFrame {
         loginButton = new javax.swing.JButton();
         loginButton1 = new javax.swing.JButton();
         loginButton2 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
         jPanel17 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
 
@@ -675,15 +676,23 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable6.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
         jTable6.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "**Bike**", "Duke 250", "$400k", "20", "Available"},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, "1", "**Bike**", "Duke 250", "$400k", "20", "Available"},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SN", "Type", "Modal", "Price", "Amount", "Status"
+                "", "SN", "Type", "Modal", "Price", "Amount", "Status"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane6.setViewportView(jTable6);
 
         jLabel24.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
@@ -757,6 +766,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(loginButton2)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jSeparator1)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -768,12 +778,14 @@ public class AdminPanel extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginButton)
                     .addComponent(loginButton1)
                     .addComponent(loginButton2))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Inventory Management", jPanel16);
@@ -924,6 +936,7 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;

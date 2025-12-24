@@ -46,6 +46,7 @@ public class InventoryPopup extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Admin | Add to inventory");
+        setModal(true);
         setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(31, 41, 55));
@@ -77,7 +78,7 @@ public class InventoryPopup extends javax.swing.JDialog {
         loginButton.setBackground(new java.awt.Color(0, 127, 255));
         loginButton.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
-        loginButton.setText("➕  Add Item");
+        loginButton.setText("+  Add Item");
         loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginButton.addActionListener(this::loginButtonActionPerformed);
 
