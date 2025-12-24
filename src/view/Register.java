@@ -93,6 +93,7 @@ public class Register extends javax.swing.JFrame {
         usernameField.setBackground(new java.awt.Color(255, 255, 255));
         usernameField.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
         usernameField.setForeground(new java.awt.Color(0, 0, 0));
+        usernameField.setToolTipText("Enter email address");
         usernameField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
         usernameField.addActionListener(this::usernameFieldActionPerformed);
 
@@ -104,6 +105,7 @@ public class Register extends javax.swing.JFrame {
         passwordField.setBackground(new java.awt.Color(255, 255, 255));
         passwordField.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
         passwordField.setForeground(new java.awt.Color(0, 0, 0));
+        passwordField.setToolTipText("Enter password");
         passwordField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
 
         loginButton.setBackground(new java.awt.Color(0, 127, 255));
@@ -124,6 +126,7 @@ public class Register extends javax.swing.JFrame {
         confirmPasswordField.setBackground(new java.awt.Color(255, 255, 255));
         confirmPasswordField.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
         confirmPasswordField.setForeground(new java.awt.Color(0, 0, 0));
+        confirmPasswordField.setToolTipText("Re-enter password");
         confirmPasswordField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
 
         confirmPassword.setBackground(new java.awt.Color(0, 0, 0));
