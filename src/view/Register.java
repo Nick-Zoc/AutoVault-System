@@ -115,6 +115,11 @@ public class Register extends javax.swing.JFrame {
         signIn.setForeground(new java.awt.Color(0, 153, 255));
         signIn.setText("Sign in");
         signIn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        signIn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signInMouseClicked(evt);
+            }
+        });
 
         confirmPasswordField.setBackground(new java.awt.Color(255, 255, 255));
         confirmPasswordField.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
@@ -259,6 +264,13 @@ public class Register extends javax.swing.JFrame {
     private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameFieldActionPerformed
+
+    private void signInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInMouseClicked
+        // open login form and close register form
+        Login loginForm = new Login();
+        loginForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_signInMouseClicked
 
     /**
      * @param args the command line arguments
