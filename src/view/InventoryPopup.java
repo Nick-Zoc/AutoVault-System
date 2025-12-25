@@ -43,6 +43,8 @@ public class InventoryPopup extends javax.swing.JDialog {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         loginButton1 = new javax.swing.JButton();
+        jTextField2 = new javax.swing.JTextField();
+        username4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Admin | Add to inventory");
@@ -90,39 +92,39 @@ public class InventoryPopup extends javax.swing.JDialog {
 
         auto1.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
         auto1.setForeground(new java.awt.Color(0, 0, 0));
-        auto1.setText("Add to Inventory");
+        auto1.setText("<html>Add to <span style =\"color: #007FFF\">Inventory</span> </html>");
 
         username1.setBackground(new java.awt.Color(0, 0, 0));
         username1.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         username1.setForeground(new java.awt.Color(0, 0, 0));
-        username1.setText("Model");
+        username1.setText("Make");
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setToolTipText("Enter selling price");
+        jTextField1.setToolTipText("Enter vehicle model");
         jTextField1.setCaretColor(new java.awt.Color(0, 0, 0));
 
         username2.setBackground(new java.awt.Color(0, 0, 0));
         username2.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         username2.setForeground(new java.awt.Color(0, 0, 0));
-        username2.setText("Price");
+        username2.setText("Model");
 
         username3.setBackground(new java.awt.Color(0, 0, 0));
         username3.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         username3.setForeground(new java.awt.Color(0, 0, 0));
-        username3.setText("Amount");
+        username3.setText("Price");
 
         jTextField4.setBackground(new java.awt.Color(255, 255, 255));
         jTextField4.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField4.setToolTipText("Enter vehicle model ");
+        jTextField4.setToolTipText("Enter vehicle maker ");
         jTextField4.setCaretColor(new java.awt.Color(0, 0, 0));
 
         jTextField5.setBackground(new java.awt.Color(255, 255, 255));
         jTextField5.setFont(new java.awt.Font("Inter", 0, 13)); // NOI18N
         jTextField5.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField5.setToolTipText("Enter Stock amount");
+        jTextField5.setToolTipText("Enter price");
         jTextField5.setCaretColor(new java.awt.Color(0, 0, 0));
 
         loginButton1.setBackground(new java.awt.Color(102, 102, 102));
@@ -132,6 +134,17 @@ public class InventoryPopup extends javax.swing.JDialog {
         loginButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginButton1.addActionListener(this::loginButton1ActionPerformed);
 
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField2.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField2.setToolTipText("Enter stock amount");
+        jTextField2.setCaretColor(new java.awt.Color(0, 0, 0));
+
+        username4.setBackground(new java.awt.Color(0, 0, 0));
+        username4.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
+        username4.setForeground(new java.awt.Color(0, 0, 0));
+        username4.setText("Amount");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -140,13 +153,16 @@ public class InventoryPopup extends javax.swing.JDialog {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(auto1)
+                    .addComponent(auto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(username)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(username2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(username4)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(username3)
@@ -164,17 +180,17 @@ public class InventoryPopup extends javax.swing.JDialog {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(auto1)
+                .addComponent(auto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                         .addComponent(username)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                            .addComponent(jComboBox1)))
                     .addComponent(username1, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(43, 43, 43)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(username2)
                     .addComponent(username3))
@@ -182,7 +198,11 @@ public class InventoryPopup extends javax.swing.JDialog {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField5)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
+                .addGap(18, 18, 18)
+                .addComponent(username4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(loginButton1))
@@ -200,10 +220,10 @@ public class InventoryPopup extends javax.swing.JDialog {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(106, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(69, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -273,6 +293,7 @@ public class InventoryPopup extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JButton loginButton;
@@ -281,5 +302,6 @@ public class InventoryPopup extends javax.swing.JDialog {
     private javax.swing.JLabel username1;
     private javax.swing.JLabel username2;
     private javax.swing.JLabel username3;
+    private javax.swing.JLabel username4;
     // End of variables declaration//GEN-END:variables
 }

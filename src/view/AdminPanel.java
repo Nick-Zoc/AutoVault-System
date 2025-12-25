@@ -473,13 +473,13 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable2.setForeground(new java.awt.Color(0, 0, 0));
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "**Placeholder**", "25", "$200k"},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"1", null, null, "**Placeholder**", "25", "$200k"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "SN", "Modal", "Sold", "Revenue"
+                "SN", "Vehicle ID", "Make", "Modal", "Sold Amount", "Revenue"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -516,13 +516,13 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable3.setForeground(new java.awt.Color(0, 0, 0));
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "**Placeholder only**", "25", "$200k"},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"1", null, null, "**Placeholder only**", "25", "$200k"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "SN", "Modal", "Sold", "Revenue"
+                "SN", "Vehicle ID", "Make", "Modal", "Sold Amount", "Revenue"
             }
         ));
         jTable3.setGridColor(new java.awt.Color(255, 255, 255));
@@ -560,13 +560,13 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable4.setForeground(new java.awt.Color(0, 0, 0));
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "**Placeholder only**", "25", "$200k"},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"1", null, null, "**Placeholder only**", "25", "$200k"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "SN", "Modal", "Sold", "Revenue"
+                "SN", "Vehicle ID", "Make", "Modal", "Sold Amount", "Revenue"
             }
         ));
         jScrollPane4.setViewportView(jTable4);
@@ -602,13 +602,13 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable5.setForeground(new java.awt.Color(0, 0, 0));
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "**Placeholder**", "25", "$200k"},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"1", null, null, "**Placeholder**", "25", "$200k"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "SN", "Modal", "Sold", "Revenue"
+                "SN", "Vehicle ID", "Make", "Modal", "Sold Amount", "Revenue"
             }
         ));
         jScrollPane5.setViewportView(jTable5);
@@ -704,17 +704,17 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable6.setForeground(new java.awt.Color(0, 0, 0));
         jTable6.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, "1", "**Bike**", "Duke 250", "$400k", "20", "Available"},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, "1", null, "**Bike**", null, "Duke 250", "$400k", "20", "Available"},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "", "SN", "Type", "Modal", "Price", "Amount", "Status"
+                "", "SN", "Vehicle ID", "Type", "Make", "Modal", "Price", "Amount", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -832,17 +832,17 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable7.setForeground(new java.awt.Color(0, 0, 0));
         jTable7.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, "1", "**Bike**", "Duke 250", "$400k", "20", "Available"},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, "1", null, "**Bike**", null, "Duke 250", "$400k", "20", "Available"},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "", "SN", "Type", "Modal", "Price", "Amount", "Status"
+                "", "SN", "Vehicle ID", "Type", "Make", "Modal", "Price", "Amount", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -964,17 +964,17 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable8.setForeground(new java.awt.Color(0, 0, 0));
         jTable8.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, "1", "**Bike**", "Duke 250", "$400k", "20", "Available"},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, "1", null, "**Bike**", null, "Duke 250", "$400k", "20", "Available"},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "", "SN", "Type", "Modal", "Price", "Amount", "Status"
+                "", "SN", "Vehicle ID", "Type", "Make", "Modal", "Price", "Amount", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
