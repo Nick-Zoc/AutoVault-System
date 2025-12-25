@@ -13,7 +13,7 @@ import model.Vehicle;
  *
  * @author nick
  */
-public class AutoVaultSystem {
+public class ModelDataController {
 
     // Data structures to store all the data in memory
     private ArrayList<Vehicle> vehicleList; // stores active inventory
@@ -22,7 +22,7 @@ public class AutoVaultSystem {
     private LinkedList<User> userList; // stores registered users (using LinkedList)
 
     // constructor to create an instance of AutoVaultSystem
-    public AutoVaultSystem() {
+    public ModelDataController() {
         // initialize all data structures
         vehicleList = new ArrayList<Vehicle>();
         soldVehicleHistory = new ArrayList<Vehicle>();
