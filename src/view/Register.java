@@ -31,8 +31,6 @@ public class Register extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        auto = new javax.swing.JLabel();
-        vault = new javax.swing.JLabel();
         signInText = new javax.swing.JLabel();
         username = new javax.swing.JLabel();
         usernameField = new javax.swing.JTextField();
@@ -43,6 +41,10 @@ public class Register extends javax.swing.JFrame {
         signIn = new javax.swing.JLabel();
         confirmPasswordField = new javax.swing.JPasswordField();
         confirmPassword = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        auto1 = new javax.swing.JLabel();
+        vault1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("AutoVault | Registration");
@@ -70,15 +72,6 @@ public class Register extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 10, Short.MAX_VALUE)
         );
-
-        auto.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
-        auto.setForeground(new java.awt.Color(0, 0, 0));
-        auto.setText("Auto");
-
-        vault.setBackground(new java.awt.Color(0, 0, 0));
-        vault.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
-        vault.setForeground(new java.awt.Color(0, 127, 255));
-        vault.setText("Vault");
 
         signInText.setBackground(new java.awt.Color(51, 51, 51));
         signInText.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
@@ -134,6 +127,20 @@ public class Register extends javax.swing.JFrame {
         confirmPassword.setForeground(new java.awt.Color(0, 0, 0));
         confirmPassword.setText("Confirm Password");
 
+        jLabel29.setBackground(new java.awt.Color(31, 41, 55));
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/autoVaultLogo (1).png"))); // NOI18N
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        auto1.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
+        auto1.setForeground(new java.awt.Color(0, 0, 0));
+        auto1.setText("Auto");
+
+        vault1.setBackground(new java.awt.Color(0, 0, 0));
+        vault1.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
+        vault1.setForeground(new java.awt.Color(0, 127, 255));
+        vault1.setText("Vault");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -153,33 +160,50 @@ public class Register extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(auto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(vault)
-                        .addGap(103, 103, 103))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(signInText)
-                        .addGap(50, 50, 50))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(alreadyAccount)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(signIn))
                             .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(84, 84, 84))))
+                        .addGap(84, 84, 84))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(signInText)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel29)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(auto1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(vault1)
+                                .addGap(11, 11, 11)))
+                        .addGap(50, 50, 50))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(auto)
-                    .addComponent(vault, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(vault1)
+                                    .addComponent(auto1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jSeparator1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14)))
                 .addComponent(signInText)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(username)
                 .addGap(4, 4, 4)
                 .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -263,12 +287,14 @@ public class Register extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel alreadyAccount;
-    private javax.swing.JLabel auto;
+    private javax.swing.JLabel auto1;
     private javax.swing.JLabel confirmPassword;
     private javax.swing.JPasswordField confirmPasswordField;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton loginButton;
     private javax.swing.JLabel password;
     private javax.swing.JPasswordField passwordField;
@@ -276,6 +302,6 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel signInText;
     private javax.swing.JLabel username;
     private javax.swing.JTextField usernameField;
-    private javax.swing.JLabel vault;
+    private javax.swing.JLabel vault1;
     // End of variables declaration//GEN-END:variables
 }
