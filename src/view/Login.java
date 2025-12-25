@@ -4,8 +4,7 @@
  */
 package view;
 
-import controller.ModelDataController;
-import model.User;
+import controller.AutoVaultSystem;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,7 +16,7 @@ public class Login extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
 
     // create controller instance to access data
-    private ModelDataController controller = new ModelDataController();
+    private AutoVaultSystem controller = new AutoVaultSystem();
 
     /**
      * Creates new form Login
@@ -279,14 +278,8 @@ public class Login extends javax.swing.JFrame {
                 return;
             }
 
-            // check if user exists in the system
-            boolean loginSuccess = false;
-            for (User user : controller.getUserList()) {
-                if (user.getUsername().equals(enteredUsername) && user.getPassword().equals(enteredPassword)) {
-                    loginSuccess = true;
-                    break;
-                }
-            }
+            // call controller to check login
+            boolean loginSuccess = controller.checkLogin(enteredUsername, enteredPassword);
 
             // if login successful, open admin panel
             if (loginSuccess) {
