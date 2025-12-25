@@ -22,7 +22,7 @@ public class Vehicle {
     private int year;
     private int amount;
     private double price;
-    private String status; // e.g., "Available", "Out of Stock"
+    private String status; // "Available", "Out of Stock" or "Deleted"
 
     // Constructor to initialize a Vehicle object.
     // Automatically generates vehicleId based on vehicle type and sets status based
