@@ -10,30 +10,59 @@ package model;
  */
 public class Vehicle {
 
+    // intial counter for generating unique vehicle IDs
+    private static int carCounter = 1000;
+    private static int bikeCounter = 2000;
+
     // creating private variables to restrict access.
+    private String vehicleId; // Auto-generated ID (e.g., "C_1001", "B_2001")
     private String vehicleType; // e.g., "Car", "Bike" (Used to distinguish vehicle types)
     private String make;
     private String model;
+    private int year;
     private int amount;
     private double price;
-    private String status;      // e.g., "Available", "Sold"
+    private String status; // e.g., "Available", "Out of Stock"
 
-    // constructor to initialize the variables
-    public Vehicle(String vehicleId, String make, String model, int amount, double price, String status, String vehicleType) {
+    // Constructor to initialize a Vehicle object.
+    // Automatically generates vehicleId based on vehicle type and sets status based
+    // on amount.
+    public Vehicle(String vehicleType, String make, String model, int year, int amount, double price) {
+        // Auto-generate Vehicle ID based on type
+        if (vehicleType.equals("Car")) {
+            carCounter = carCounter + 1;
+            this.vehicleId = "C-" + (carCounter);
+        } else if (vehicleType.equals("Bike")) {
+            bikeCounter = bikeCounter + 1;
+            this.vehicleId = "B-" + (bikeCounter);
+        }
+
+        this.vehicleType = vehicleType;
         this.make = make;
         this.model = model;
+        this.year = year;
         this.amount = amount;
         this.price = price;
-        // when amount of stock > 0 then vehicle is available.
+
+        // Auto-calculate status based on amount
         if (amount > 0) {
             this.status = "Available";
         } else {
-            this.status = "Sold";
+            this.status = "Out of Stock";
         }
-        this.vehicleType = vehicleType;
     }
 
     // Getters and Setters for each attribute
+    // Gets the unique vehicle ID
+    public String getVehicleId() {
+        return vehicleId;
+    }
+
+    // Sets the vehicle ID
+    public void setVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+
     public String getVehicleType() {
         return vehicleType;
     }
@@ -58,12 +87,26 @@ public class Vehicle {
         this.model = model;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
     public int getAmount() {
         return amount;
     }
 
-    public void setAmount(int year) {
+    public void setAmount(int amount) {
         this.amount = amount;
+        // Update status when amount changes
+        if (this.amount > 0) {
+            this.status = "Available";
+        } else {
+            this.status = "Out of Stock";
+        }
     }
 
     public double getPrice() {
