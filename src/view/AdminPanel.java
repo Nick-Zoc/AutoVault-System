@@ -516,13 +516,13 @@ public class AdminPanel extends javax.swing.JFrame {
         jTable3.setForeground(new java.awt.Color(0, 0, 0));
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "**Placeholder only**", "25", "$200k"},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"1", "**Placeholder only**", "25", "$200k", null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "SN", "Modal", "Sold", "Revenue"
+                "SN", "Modal", "Sold Amount", "Revenue", "Make"
             }
         ));
         jTable3.setGridColor(new java.awt.Color(255, 255, 255));
