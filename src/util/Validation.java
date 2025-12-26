@@ -19,6 +19,16 @@ public class Validation {
         return false; // field has value (valid)
     }
 
+    // method to check if a string can be converted to a valid number
+    public static boolean isValidNumber(String value) {
+        try {
+            Double.parseDouble(value);
+            return true; // conversion successful, valid number
+        } catch (NumberFormatException e) {
+            return false; // conversion failed, not a valid number
+        }
+    }
+
     // method to check if a double number is positive (greater than 0)
     public static boolean isPositiveNumber(double number) {
         if (number > 0) {
