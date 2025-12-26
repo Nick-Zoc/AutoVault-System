@@ -152,6 +152,9 @@
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel13">
               <Properties>
@@ -859,7 +862,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="6" rowCount="4">
+                              <Table columnCount="7" rowCount="4">
                                 <Column editable="true" title="SN" type="java.lang.Object">
                                   <Data value="1"/>
                                   <Data value="null"/>
@@ -874,6 +877,7 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
+                                <Column editable="true" title="Year" type="java.lang.Object"/>
                                 <Column editable="true" title="Sold Amount" type="java.lang.Object">
                                   <Data value="25"/>
                                   <Data value="null"/>
@@ -964,7 +968,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="6" rowCount="4">
+                              <Table columnCount="7" rowCount="4">
                                 <Column editable="true" title="SN" type="java.lang.Object">
                                   <Data value="1"/>
                                   <Data value="null"/>
@@ -979,6 +983,7 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
+                                <Column editable="true" title="Year" type="java.lang.Object"/>
                                 <Column editable="true" title="Sold Amount" type="java.lang.Object">
                                   <Data value="25"/>
                                   <Data value="null"/>
@@ -995,6 +1000,11 @@
                             </Property>
                             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                               <TableColumnModel selectionModel="0">
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
                                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                   <Title/>
                                   <Editor/>
@@ -1104,7 +1114,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="6" rowCount="4">
+                              <Table columnCount="7" rowCount="4">
                                 <Column editable="true" title="SN" type="java.lang.Object">
                                   <Data value="1"/>
                                   <Data value="null"/>
@@ -1119,6 +1129,7 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
+                                <Column editable="true" title="Year" type="java.lang.Object"/>
                                 <Column editable="true" title="Sold Amount" type="java.lang.Object">
                                   <Data value="25"/>
                                   <Data value="null"/>
@@ -1206,7 +1217,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="6" rowCount="4">
+                              <Table columnCount="7" rowCount="4">
                                 <Column editable="true" title="SN" type="java.lang.Object">
                                   <Data value="1"/>
                                   <Data value="null"/>
@@ -1221,6 +1232,7 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
+                                <Column editable="true" title="Year" type="java.lang.Object"/>
                                 <Column editable="true" title="Sold Amount" type="java.lang.Object">
                                   <Data value="25"/>
                                   <Data value="null"/>
@@ -1388,7 +1400,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="9" rowCount="4">
+                              <Table columnCount="10" rowCount="4">
                                 <Column editable="true" title="" type="java.lang.Boolean"/>
                                 <Column editable="true" title="SN" type="java.lang.Object">
                                   <Data value="1"/>
@@ -1410,6 +1422,7 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
+                                <Column editable="true" title="Year" type="java.lang.Object"/>
                                 <Column editable="true" title="Price" type="java.lang.Object">
                                   <Data value="$400k"/>
                                   <Data value="null"/>
@@ -1558,6 +1571,9 @@
                       <Color id="Hand Cursor"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButton1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="loginButton2">
                   <Properties>
@@ -1575,6 +1591,9 @@
                       <Color id="Hand Cursor"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButton2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSeparator" name="jSeparator1">
                 </Component>
@@ -1703,7 +1722,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="9" rowCount="4">
+                              <Table columnCount="10" rowCount="4">
                                 <Column editable="true" title="" type="java.lang.Boolean"/>
                                 <Column editable="true" title="SN" type="java.lang.Object">
                                   <Data value="1"/>
@@ -1725,6 +1744,7 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
+                                <Column editable="true" title="Year" type="java.lang.Object"/>
                                 <Column editable="true" title="Price" type="java.lang.Object">
                                   <Data value="$400k"/>
                                   <Data value="null"/>
@@ -2027,7 +2047,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="9" rowCount="4">
+                              <Table columnCount="10" rowCount="4">
                                 <Column editable="true" title="" type="java.lang.Boolean"/>
                                 <Column editable="true" title="SN" type="java.lang.Object">
                                   <Data value="1"/>
@@ -2049,6 +2069,7 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
+                                <Column editable="true" title="Year" type="java.lang.Object"/>
                                 <Column editable="true" title="Price" type="java.lang.Object">
                                   <Data value="$400k"/>
                                   <Data value="null"/>
