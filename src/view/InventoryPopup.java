@@ -325,7 +325,7 @@ public class InventoryPopup extends javax.swing.JDialog {
             String priceText = jTextField5.getText();
             String amountText = jTextField2.getText();
 
-            // basic validation - check if fields are empty
+            // check if fields are empty
             if (make.trim().equals("") || model.trim().equals("") ||
                     priceText.trim().equals("") || amountText.trim().equals("")) {
                 JOptionPane.showMessageDialog(this, "Please fill all fields!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -335,31 +335,34 @@ public class InventoryPopup extends javax.swing.JDialog {
             // parse numbers
             double price = Double.parseDouble(priceText);
             int amount = Integer.parseInt(amountText);
-            int year = 2024; // default year for now
+            int year = 2024;
 
-            // call controller method based on mode
-            String result;
             if (mode.equals("edit") && vehicleId != null) {
-                // update existing vehicle
-                result = controller.updateVehicle(vehicleId, make, model, year, amount, price);
-            } else {
-                // add new vehicle
-                result = controller.addVehicle(vehicleType, make, model, year, amount, price);
-            }
-
-            // check result from controller
-            if (result.equals("SUCCESS")) {
-                if (mode.equals("edit")) {
+                // find the vehicle and update its properties
+                Vehicle vehicleToEdit = controller.findVehicleById(vehicleId);
+                if (vehicleToEdit != null) {
+                    vehicleToEdit.setMake(make);
+                    vehicleToEdit.setModel(model);
+                    vehicleToEdit.setYear(year);
+                    vehicleToEdit.setPrice(price);
+                    vehicleToEdit.setAmount(amount);
                     JOptionPane.showMessageDialog(this, "Vehicle updated successfully!", "Success",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else {
-                    JOptionPane.showMessageDialog(this, "Vehicle added successfully!", "Success",
-                            JOptionPane.INFORMATION_MESSAGE);
+                    this.dispose();
                 }
-                this.dispose(); // close popup
             } else {
-                // show error message from controller
-                JOptionPane.showMessageDialog(this, result, "Error", JOptionPane.ERROR_MESSAGE);
+                // check for duplicate before adding
+                if (controller.checkDuplicate(make, model)) {
+                    JOptionPane.showMessageDialog(this, "Vehicle with same Make and Model already exists!",
+                            "Duplicate Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+                // create new vehicle and add to controller
+                Vehicle newVehicle = new Vehicle(vehicleType, make, model, year, amount, price);
+                controller.addVehicle(newVehicle);
+                JOptionPane.showMessageDialog(this, "Vehicle added successfully!", "Success",
+                        JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
             }
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Please enter valid numbers for Price and Amount!", "Error",
