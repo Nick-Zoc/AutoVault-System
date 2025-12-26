@@ -81,7 +81,7 @@ public class Register extends javax.swing.JFrame {
         username.setBackground(new java.awt.Color(0, 0, 0));
         username.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
         username.setForeground(new java.awt.Color(0, 0, 0));
-        username.setText("Email");
+        username.setText("Username");
 
         usernameField.setBackground(new java.awt.Color(255, 255, 255));
         usernameField.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
