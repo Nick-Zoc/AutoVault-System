@@ -13,10 +13,10 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author nick
  */
-public class AdminPanel extends javax.swing.JFrame {
+public class UserPanel extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger
-            .getLogger(AdminPanel.class.getName());
+            .getLogger(UserPanel.class.getName());
 
     // create controller instance to access data
     private AutoVaultSystem controller = new AutoVaultSystem();
@@ -24,7 +24,7 @@ public class AdminPanel extends javax.swing.JFrame {
     /**
      * Creates new form AdminHome
      */
-    public AdminPanel() {
+    public UserPanel() {
         initComponents();
         loadVehicleListToTable(); // load vehicle data into table when form opens
     }
@@ -103,16 +103,6 @@ public class AdminPanel extends javax.swing.JFrame {
         loginButton1 = new javax.swing.JButton();
         loginButton2 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        historyPanel = new javax.swing.JPanel();
-        jPanel22 = new javax.swing.JPanel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTable7 = new javax.swing.JTable();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        loginButton3 = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JSeparator();
         recentlyaddedPanel = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
@@ -269,7 +259,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Inter", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("<html> Welcome Back, <span style =\"color: #007FFF\"> Admin</span> </html>");
+        jLabel1.setText("<html> Welcome Back, <span style =\"color: #007FFF\">*#User*#</span> </html>");
 
         jPanel7.setBackground(new java.awt.Color(33, 37, 41));
         jPanel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true));
@@ -837,123 +827,6 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Inventory Management", inventoryManagementPanel);
 
-        historyPanel.setBackground(new java.awt.Color(31, 41, 55));
-
-        jPanel22.setBackground(new java.awt.Color(0, 127, 255));
-        jPanel22.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
-
-        jTable7.setBackground(new java.awt.Color(215, 217, 224));
-        jTable7.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
-        jTable7.setForeground(new java.awt.Color(0, 0, 0));
-        jTable7.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, "1", null, "**Bike**", null, "Duke 250", null, "$400k", "20", "Available"},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "", "SN", "Vehicle ID", "Type", "Make", "Modal", "Year", "Price", "Amount", "Status"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane7.setViewportView(jTable7);
-
-        jLabel26.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("🕑  History Table");
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1254, Short.MAX_VALUE)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel26)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE))
-        );
-
-        jLabel27.setFont(new java.awt.Font("Inter", 1, 30)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("History");
-
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField2.setToolTipText("Enter any column value to search");
-        jTextField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        jButton3.setBackground(new java.awt.Color(0, 127, 255));
-        jButton3.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Search");
-
-        loginButton3.setBackground(new java.awt.Color(255, 153, 0));
-        loginButton3.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        loginButton3.setForeground(new java.awt.Color(255, 255, 255));
-        loginButton3.setText("⏪  Restore Data");
-        loginButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout historyPanelLayout = new javax.swing.GroupLayout(historyPanel);
-        historyPanel.setLayout(historyPanelLayout);
-        historyPanelLayout.setHorizontalGroup(
-            historyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historyPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(historyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator2)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, historyPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel27)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, historyPanelLayout.createSequentialGroup()
-                        .addComponent(loginButton3)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jPanel22, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        historyPanelLayout.setVerticalGroup(
-            historyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(historyPanelLayout.createSequentialGroup()
-                .addGroup(historyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(historyPanelLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(historyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historyPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel27)
-                        .addGap(18, 18, 18)))
-                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(loginButton3)
-                .addGap(61, 61, 61))
-        );
-
-        jTabbedPane1.addTab("History", historyPanel);
-
         recentlyaddedPanel.setBackground(new java.awt.Color(31, 41, 55));
 
         jLabel28.setFont(new java.awt.Font("Inter", 1, 30)); // NOI18N
@@ -1098,6 +971,22 @@ public class AdminPanel extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void loginButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginButton2ActionPerformed
+
+    private void loginButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginButton1ActionPerformed
+
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void jLabel12FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel12FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel12FocusLost
+
     private void jLabel12FocusLost(java.awt.event.FocusEvent evt) {// GEN-FIRST:event_jLabel12FocusLost
         // TODO add your handling code here:
     }// GEN-LAST:event_jLabel12FocusLost
@@ -1220,17 +1109,15 @@ public class AdminPanel extends javax.swing.JFrame {
         // </editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new AdminPanel().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new UserPanel().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel auto;
     private javax.swing.JPanel dashboardPanel;
-    private javax.swing.JPanel historyPanel;
     private javax.swing.JPanel inventoryManagementPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1250,8 +1137,6 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
@@ -1272,7 +1157,6 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1284,25 +1168,20 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
-    private javax.swing.JTable jTable7;
     private javax.swing.JTable jTable8;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JButton loginButton;
     private javax.swing.JButton loginButton1;
     private javax.swing.JButton loginButton2;
-    private javax.swing.JButton loginButton3;
     private javax.swing.JPanel recentlyaddedPanel;
     private javax.swing.JLabel vault;
     // End of variables declaration//GEN-END:variables
