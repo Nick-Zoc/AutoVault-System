@@ -47,7 +47,7 @@ public class Validation {
 
     // method to validate year (should be reasonable, like between 1900 and 2030)
     public static boolean isValidYear(int year) {
-        if (year >= 1900 && year <= 2030) {
+        if (year >= 1900 && year <= 2026) {
             return true; // valid year range
         }
         return false; // year out of range

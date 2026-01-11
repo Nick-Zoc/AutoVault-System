@@ -53,7 +53,7 @@ public class AutoVaultSystem {
         prepareInitialData();
     }
 
-    // ============== PREPARE INITIAL DATA ==============
+    //PREPARE INITIAL DATA
     private void prepareInitialData() {
         // Create 5 car objects
         Vehicle car1 = new Vehicle("Car", "Toyota", "Camry", 2022, 5, 25000.00);
@@ -188,7 +188,7 @@ public class AutoVaultSystem {
         System.out.println("Vehicle added: " + vehicle.getMake() + " " + vehicle.getModel());
     }
 
-    // ============== DELETE VEHICLE ==============
+    // DELETE VEHICLE
     public void deleteVehicle(Vehicle vehicle) {
         // Remove from main list
         vehicleList.remove(vehicle);
@@ -200,7 +200,7 @@ public class AutoVaultSystem {
         System.out.println("Vehicle deleted: " + vehicle.getMake() + " " + vehicle.getModel());
     }
 
-    // ============== FIND VEHICLE BY ID ==============
+    //FIND VEHICLE BY ID
     public Vehicle findVehicleById(String vehicleId) {
         // Loop through all vehicles
         for (int i = 0; i < vehicleList.size(); i++) {
@@ -212,7 +212,7 @@ public class AutoVaultSystem {
         return null; // not found
     }
 
-    // ============== CHECK FOR DUPLICATE ==============
+    //CHECK FOR DUPLICATE
     public boolean checkDuplicate(String make, String model) {
         // Loop through all vehicles
         for (int i = 0; i < vehicleList.size(); i++) {
@@ -225,7 +225,7 @@ public class AutoVaultSystem {
         return false; // no duplicate
     }
 
-    // ============== GETTERS ==============
+    //GETTERS
     public ArrayList<Vehicle> getVehicleList() {
         return vehicleList;
     }
