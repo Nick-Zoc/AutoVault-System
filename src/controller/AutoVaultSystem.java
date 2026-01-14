@@ -91,7 +91,7 @@ public class AutoVaultSystem {
         enqueue(bike5);
 
         // Create admin user
-        User admin = new User("admin", "auto-vault-2026", "Admin");
+        User admin = new User("admin", "admin-autovault-2026", "Admin");
         userList.add(admin);
 
         // Create regular user
