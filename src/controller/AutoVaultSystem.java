@@ -16,19 +16,19 @@ import model.Vehicle;
  */
 public class AutoVaultSystem {
 
-    //ATA STRUCTURES
+    // ATA STRUCTURES
     // Main inventory list using ArrayList
     private ArrayList<Vehicle> vehicleList;
 
     // Users list using LinkedList
     private LinkedList<User> userList;
 
-    //STACK FOR HISTORY (using array)
+    // STACK FOR HISTORY (using array)
     private static final int STACK_MAX = 100;
     private Vehicle[] historyStack;
     private int top;
 
-    //QUEUE FOR RECENTLY ADDED (using array)
+    // QUEUE FOR RECENTLY ADDED (using array)
     private static final int QUEUE_SIZE = 5;
     private Vehicle[] recentQueue;
     private int front;
@@ -53,7 +53,7 @@ public class AutoVaultSystem {
         prepareInitialData();
     }
 
-    //PREPARE INITIAL DATA
+    // PREPARE INITIAL DATA
     private void prepareInitialData() {
         // Create 5 car objects
         Vehicle car1 = new Vehicle("Car", "Toyota", "Camry", 2022, 5, 25000.00);
@@ -93,6 +93,10 @@ public class AutoVaultSystem {
         // Create admin user
         User admin = new User("admin", "auto-vault-2026", "Admin");
         userList.add(admin);
+
+        // Create regular user
+        User user = new User("user", "user-autovault-2026", "User");
+        userList.add(user);
 
         System.out.println("Initial data added: " + vehicleList.size() + " vehicles");
     }
@@ -164,7 +168,7 @@ public class AutoVaultSystem {
         return rear;
     }
 
-    //LOGIN METHOD
+    // LOGIN METHOD
     public boolean checkLogin(String username, String password) {
         // Loop through all users
         for (int i = 0; i < userList.size(); i++) {
@@ -177,7 +181,19 @@ public class AutoVaultSystem {
         return false; // login failed
     }
 
-    //ADD VEHICLE
+    // GET USER ROLE
+    public String getUserRole(String username) {
+        // Loop through all users to find the role
+        for (int i = 0; i < userList.size(); i++) {
+            User user = userList.get(i);
+            if (user.getUsername().equals(username)) {
+                return user.getRole(); // return role (Admin or User)
+            }
+        }
+        return null; // user not found
+    }
+
+    // ADD VEHICLE
     public void addVehicle(Vehicle vehicle) {
         // Add to main list
         vehicleList.add(vehicle);
@@ -200,7 +216,7 @@ public class AutoVaultSystem {
         System.out.println("Vehicle deleted: " + vehicle.getMake() + " " + vehicle.getModel());
     }
 
-    //FIND VEHICLE BY ID
+    // FIND VEHICLE BY ID
     public Vehicle findVehicleById(String vehicleId) {
         // Loop through all vehicles
         for (int i = 0; i < vehicleList.size(); i++) {
@@ -212,7 +228,7 @@ public class AutoVaultSystem {
         return null; // not found
     }
 
-    //CHECK FOR DUPLICATE
+    // CHECK FOR DUPLICATE
     public boolean checkDuplicate(String make, String model) {
         // Loop through all vehicles
         for (int i = 0; i < vehicleList.size(); i++) {
@@ -225,13 +241,74 @@ public class AutoVaultSystem {
         return false; // no duplicate
     }
 
-    //GETTERS
+    // GETTERS
     public ArrayList<Vehicle> getVehicleList() {
         return vehicleList;
     }
 
     public LinkedList<User> getUserList() {
         return userList;
+    }
+
+    // Selection Sort - sort vehicles by price
+    // if ascending is true, sort low to high. if false, sort high to low
+    public void sortVehicleListByPrice(boolean ascending) {
+        int size = vehicleList.size();
+
+        // loop through each position in the list
+        for (int i = 0; i < size - 1; i++) {
+            int minIndex = i;
+
+            // find the minimum (or maximum) element in the remaining unsorted part
+            for (int j = i + 1; j < size; j++) {
+                double currentPrice = vehicleList.get(j).getPrice();
+                double minPrice = vehicleList.get(minIndex).getPrice();
+
+                if (ascending) {
+                    // for ascending, find the smallest price
+                    if (currentPrice < minPrice) {
+                        minIndex = j;
+                    }
+                } else {
+                    // for descending, find the largest price
+                    if (currentPrice > minPrice) {
+                        minIndex = j;
+                    }
+                }
+            }
+
+            // swap the found element with the element at position i
+            if (minIndex != i) {
+                Vehicle temp = vehicleList.get(i);
+                vehicleList.set(i, vehicleList.get(minIndex));
+                vehicleList.set(minIndex, temp);
+            }
+        }
+
+        System.out.println("Sorted by price: " + (ascending ? "Low to High" : "High to Low"));
+    }
+
+    // Insertion Sort - sort vehicles by make (A-Z alphabetically)
+    public void sortVehicleListByMake() {
+        int size = vehicleList.size();
+
+        // start from the second element (index 1)
+        for (int i = 1; i < size; i++) {
+            Vehicle currentVehicle = vehicleList.get(i);
+            String currentMake = currentVehicle.getMake();
+            int j = i - 1;
+
+            // shift elements that are greater than currentMake to the right
+            while (j >= 0 && vehicleList.get(j).getMake().compareToIgnoreCase(currentMake) > 0) {
+                vehicleList.set(j + 1, vehicleList.get(j));
+                j = j - 1;
+            }
+
+            // insert the current vehicle at the correct position
+            vehicleList.set(j + 1, currentVehicle);
+        }
+
+        System.out.println("Sorted by make: A to Z");
     }
 
 }
