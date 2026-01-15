@@ -37,8 +37,11 @@ public class AutoVaultSystem {
     private static int front = -1;
     private static int rear = -1;
 
-    // LINKED LIST FOR PURCHASE HISTORY (stores purchased vehicles)
-    private static LinkedList<Vehicle> purchaseHistory = new LinkedList<>();
+    // ARRAY-BASED QUEUE FOR PURCHASE HISTORY (FIFO)
+    private static final int PURCHASE_QUEUE_SIZE = 100;
+    private static Vehicle[] purchaseHistory = new Vehicle[PURCHASE_QUEUE_SIZE];
+    private static int purchaseFront = -1;
+    private static int purchaseRear = -1;
 
     // Constructor
     public AutoVaultSystem() {
@@ -475,21 +478,44 @@ public class AutoVaultSystem {
         return results;
     }
 
-    // PURCHASE HISTORY METHODS (using LinkedList as FIFO Queue)
+    // PURCHASE HISTORY METHODS (using array-based FIFO Queue)
     // Add a purchased vehicle to the history (enqueue operation)
     public static void addToHistory(Vehicle vehicle) {
-        purchaseHistory.addLast(vehicle); // add to end (FIFO)
+        // enqueue operation for purchase history
+        if (purchaseRear == PURCHASE_QUEUE_SIZE - 1) {
+            System.out.println("Purchase history queue is full");
+            return;
+        }
+        if (purchaseFront == -1) {
+            purchaseFront = 0;
+        }
+        purchaseRear++;
+        purchaseHistory[purchaseRear] = vehicle;
         System.out.println("Added to purchase history: " + vehicle.getMake() + " " + vehicle.getModel());
     }
 
-    // Get all purchase history (returns LinkedList of Vehicle)
-    public static LinkedList<Vehicle> getPurchaseHistory() {
+    // Get purchase history array
+    public static Vehicle[] getPurchaseHistory() {
         return purchaseHistory;
     }
 
-    // Clear purchase history
+    // Get purchase front index
+    public static int getPurchaseFront() {
+        return purchaseFront;
+    }
+
+    // Get purchase rear index
+    public static int getPurchaseRear() {
+        return purchaseRear;
+    }
+
+    // Clear purchase history (reset queue)
     public static void clearPurchaseHistory() {
-        purchaseHistory.clear();
+        for (int i = 0; i < PURCHASE_QUEUE_SIZE; i++) {
+            purchaseHistory[i] = null;
+        }
+        purchaseFront = -1;
+        purchaseRear = -1;
     }
 
 }

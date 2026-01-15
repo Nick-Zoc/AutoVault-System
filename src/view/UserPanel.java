@@ -1146,31 +1146,39 @@ public class UserPanel extends javax.swing.JFrame {
                 model.setRowCount(0);
         }
 
-        // method to load purchase history into jTable8 (FIFO order from LinkedList)
+        // method to load purchase history into jTable8 (FIFO order from array-based
+        // queue)
         private void loadPurchaseHistoryToTable() {
                 DefaultTableModel model = (DefaultTableModel) jTable8.getModel();
                 model.setRowCount(0);
 
-                // get purchase history from controller (LinkedList of Vehicle)
-                java.util.LinkedList<Vehicle> history = AutoVaultSystem.getPurchaseHistory();
+                // get purchase history array and indices from controller
+                Vehicle[] history = AutoVaultSystem.getPurchaseHistory();
+                int front = AutoVaultSystem.getPurchaseFront();
+                int rear = AutoVaultSystem.getPurchaseRear();
 
-                // loop through history and add to table (FIFO - first purchased first)
+                // loop through queue from front to rear (FIFO order)
                 int sn = 1;
-                for (Vehicle v : history) {
-                        Object[] row = {
-                                        false, // checkbox
-                                        sn, // serial number
-                                        v.getVehicleId(),
-                                        v.getVehicleType(),
-                                        v.getMake(),
-                                        v.getModel(),
-                                        v.getYear(),
-                                        "$" + v.getPrice(),
-                                        v.getAmount(),
-                                        "Purchased" // status
-                        };
-                        model.addRow(row);
-                        sn++;
+                if (front != -1) {
+                        for (int i = front; i <= rear; i++) {
+                                Vehicle v = history[i];
+                                if (v != null) {
+                                        Object[] row = {
+                                                        false, // checkbox
+                                                        sn, // serial number
+                                                        v.getVehicleId(),
+                                                        v.getVehicleType(),
+                                                        v.getMake(),
+                                                        v.getModel(),
+                                                        v.getYear(),
+                                                        "$" + v.getPrice(),
+                                                        v.getAmount(),
+                                                        "Purchased" // status
+                                        };
+                                        model.addRow(row);
+                                        sn++;
+                                }
+                        }
                 }
         }
 

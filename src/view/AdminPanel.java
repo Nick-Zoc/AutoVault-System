@@ -1744,21 +1744,30 @@ public class AdminPanel extends javax.swing.JFrame {
                 DefaultTableModel model = (DefaultTableModel) jTable4.getModel();
                 model.setRowCount(0);
 
-                // get purchase history from controller
-                java.util.LinkedList<Vehicle> history = AutoVaultSystem.getPurchaseHistory();
+                // get purchase history array and indices from controller
+                Vehicle[] history = AutoVaultSystem.getPurchaseHistory();
+                int front = AutoVaultSystem.getPurchaseFront();
+                int rear = AutoVaultSystem.getPurchaseRear();
+
+                // loop through queue from front to rear (FIFO order)
                 int sn = 1;
-                for (Vehicle v : history) {
-                        Object[] row = {
-                                        sn,
-                                        v.getVehicleId(),
-                                        v.getMake(),
-                                        v.getModel(),
-                                        v.getYear(),
-                                        1, // sold amount (1 per purchase)
-                                        "$" + v.getPrice()
-                        };
-                        model.addRow(row);
-                        sn++;
+                if (front != -1) {
+                        for (int i = front; i <= rear; i++) {
+                                Vehicle v = history[i];
+                                if (v != null) {
+                                        Object[] row = {
+                                                        sn,
+                                                        v.getVehicleId(),
+                                                        v.getMake(),
+                                                        v.getModel(),
+                                                        v.getYear(),
+                                                        1, // sold amount (1 per purchase)
+                                                        "$" + v.getPrice()
+                                        };
+                                        model.addRow(row);
+                                        sn++;
+                                }
+                        }
                 }
         }
 
