@@ -1231,12 +1231,13 @@
                 <Component class="javax.swing.JComboBox" name="jComboBox1">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="5">
+                      <StringArray count="6">
                         <StringItem index="0" value="--Select Sort by--"/>
-                        <StringItem index="1" value="Price (Low to High)"/>
-                        <StringItem index="2" value="Price (High to Low)"/>
-                        <StringItem index="3" value="Make (A-Z)"/>
-                        <StringItem index="4" value="Status (Available-Out of Stock)"/>
+                        <StringItem index="1" value="Vehicle ID (1-n)"/>
+                        <StringItem index="2" value="Price (Low to High)"/>
+                        <StringItem index="3" value="Price (High to Low)"/>
+                        <StringItem index="4" value="Make (A-Z)"/>
+                        <StringItem index="5" value="Status (Available-Out of Stock)"/>
                       </StringArray>
                     </Property>
                   </Properties>
