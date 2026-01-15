@@ -997,8 +997,8 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="519" max="32767" attributes="0"/>
-                                  <Component id="jComboBox1" min="-2" pref="180" max="-2" attributes="0"/>
+                                  <EmptySpace pref="499" max="32767" attributes="0"/>
+                                  <Component id="jComboBox1" min="-2" pref="200" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jTextField4" min="-2" pref="194" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>

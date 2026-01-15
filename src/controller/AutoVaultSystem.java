@@ -191,6 +191,21 @@ public class AutoVaultSystem {
         return null; // user not found
     }
 
+    // REGISTER NEW USER
+    public boolean registerUser(String username, String password) {
+        // Check if username already exists
+        for (int i = 0; i < userList.size(); i++) {
+            if (userList.get(i).getUsername().equals(username)) {
+                return false; // username taken
+            }
+        }
+        // Create new user with role "User"
+        User newUser = new User(username, password, "User");
+        userList.add(newUser);
+        System.out.println("New user registered: " + username);
+        return true;
+    }
+
     // ADD VEHICLE
     public void addVehicle(Vehicle vehicle) {
         // Add to main list

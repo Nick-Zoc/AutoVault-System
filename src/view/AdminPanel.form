@@ -1288,8 +1288,8 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="423" max="32767" attributes="0"/>
-                                  <Component id="jComboBox1" min="-2" pref="180" max="-2" attributes="0"/>
+                                  <EmptySpace pref="403" max="32767" attributes="0"/>
+                                  <Component id="jComboBox1" min="-2" pref="200" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jTextField4" min="-2" pref="194" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1584,11 +1584,12 @@
                 <Component class="javax.swing.JComboBox" name="jComboBox1">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
+                      <StringArray count="5">
                         <StringItem index="0" value="--Select Sort by--"/>
                         <StringItem index="1" value="Price (Low to High)"/>
                         <StringItem index="2" value="Price (High to Low)"/>
                         <StringItem index="3" value="Make (A-Z)"/>
+                        <StringItem index="4" value="Status (Available-Out of Stock)"/>
                       </StringArray>
                     </Property>
                   </Properties>
