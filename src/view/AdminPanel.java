@@ -1155,6 +1155,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 loginButton3.setForeground(new java.awt.Color(255, 255, 255));
                 loginButton3.setText("⏪  Restore Data");
                 loginButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+                loginButton3.addActionListener(this::loginButton3ActionPerformed);
 
                 javax.swing.GroupLayout historyPanelLayout = new javax.swing.GroupLayout(historyPanel);
                 historyPanel.setLayout(historyPanelLayout);
@@ -1441,6 +1442,49 @@ public class AdminPanel extends javax.swing.JFrame {
                                         JOptionPane.ERROR_MESSAGE);
                 }
         }// GEN-LAST:event_loginButton2ActionPerformed
+
+        private void loginButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+                // get selected row from jTable7 (history table)
+                int selectedRow = jTable7.getSelectedRow();
+
+                if (selectedRow == -1) {
+                        JOptionPane.showMessageDialog(this,
+                                        "Please select a vehicle from the history table to restore!",
+                                        "No Selection", JOptionPane.WARNING_MESSAGE);
+                        return;
+                }
+
+                try {
+                        // get vehicle data from selected row (column indices match loadHistoryToTable)
+                        // columns: 0=checkbox, 1=sn, 2=vehicleId, 3=type, 4=make, 5=model, 6=year,
+                        // 7=price, 8=amount, 9=status
+                        String vehicleType = jTable7.getValueAt(selectedRow, 3).toString();
+                        String make = jTable7.getValueAt(selectedRow, 4).toString();
+                        String model = jTable7.getValueAt(selectedRow, 5).toString();
+                        int year = Integer.parseInt(jTable7.getValueAt(selectedRow, 6).toString());
+                        String priceStr = jTable7.getValueAt(selectedRow, 7).toString().replace("$", "");
+                        double price = Double.parseDouble(priceStr);
+                        int amount = Integer.parseInt(jTable7.getValueAt(selectedRow, 8).toString());
+
+                        // create new vehicle with restored data
+                        model.Vehicle restoredVehicle = new model.Vehicle(vehicleType, make, model, year, amount,
+                                        price);
+
+                        // add to vehicle list
+                        controller.addVehicle(restoredVehicle);
+
+                        // refresh all relevant tables
+                        loadVehicleListToTable();
+                        loadRecentlyAddedToTable();
+                        loadDashboardInventoryToTable();
+
+                        JOptionPane.showMessageDialog(this, "Vehicle restored successfully to inventory!",
+                                        "Success", JOptionPane.INFORMATION_MESSAGE);
+                } catch (Exception e) {
+                        JOptionPane.showMessageDialog(this, "Error restoring vehicle: " + e.getMessage(),
+                                        "Error", JOptionPane.ERROR_MESSAGE);
+                }
+        }
 
         private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
                 // get the search text from the text field
